@@ -5,7 +5,7 @@ select
 from
   dex.trades
 where
-  block_time >= '2021-01-01'
+  block_time >= '2021-01-01' AND block_time <'2022-01-01'
   AND tx_to IN (
     '\x11111112542d85b3ef69ae05771c2dccff4faa26',
     '\xDef1C0ded9bec7F1a1670819833240f027b25EfF',
@@ -37,7 +37,7 @@ ORDER BY
   
   
   
-/* Helper query to find the top 8 aggregators by volume*/
+/* Helper query to find the top 8 aggregators by volume since launch of sushiswap*/
 select
   SUM(usd_amount) as vol,
   tx_to as to
