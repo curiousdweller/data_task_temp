@@ -1,4 +1,3 @@
-# GET API KEY
 import requests
 from io import StringIO
 import pandas as pd
@@ -9,9 +8,10 @@ def main():
     get_evm_data("etherscan.io", "ethereum")
     get_evm_data("polygonscan.com", "polygon")
     get_evm_data("ftmscan.com", "ftm")
+    get_evm_data("bscscan.com", "bsc")
+    get_evm_data("snowtrace.io", "avax")
     get_sol_data()
-    # ARBITRUM
-    # OPT
+    
 
 def get_evm_data(link, name):
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"}
